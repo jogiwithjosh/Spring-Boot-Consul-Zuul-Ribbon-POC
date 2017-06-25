@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+      host: localhost
+      port: 8500
+    config:
+      server:
+        bootstrap: true
+      uri: http://localhost:${config.port:8888}
+      fail-fast: true

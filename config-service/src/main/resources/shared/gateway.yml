@@ -1,0 +1,42 @@
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+  ServerListRefreshInterval: 1000
+  eureka:
+     enabled: false
+
+zuul:
+  #ignoredServices: '*'
+  #ignoreLocalService: false
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    city-service:
+        path: /city/**
+        serviceId: city-service
+        sensitiveHeaders:
+    auth-service:
+        path: /auth/**
+        serviceId: auth-service
+        sensitiveHeaders:
+    country-service:
+        path: /country/**
+        serviceId: country-service
+        sensitiveHeaders:
+
+server:
+  port: 8080
+
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+management:
+  security:
+    enabled: false

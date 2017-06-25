@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: country-service
+  cloud:
+    config:
+      server:
+        bootstrap: true
+      uri: http://localhost:${config.port:8888}
+      fail-fast: true
+
+security:
+  basic:
+    enable: false
