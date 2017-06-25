@@ -2,9 +2,9 @@
 
 ## Stack Used
 
-### Spring Boot
-### Netflix - Zuul(Routing and Filtering), Ribbon (Load Balancer)
-### Consul (Service Discovery)
+1. Spring Boot
+2. Netflix - Zuul(Routing and Filtering), Ribbon (Load Balancer)
+3. Consul (Service Discovery)
 
 ## Setup Required
 
